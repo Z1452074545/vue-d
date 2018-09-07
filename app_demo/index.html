@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="./vue.js"></script>
+    <script type="text/javascript" src="./vue-resource.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="点击" @click="get"/>
+        {{msg}}
+    </div>
+    <script>
+      new  Vue({
+          el:"#app",
+          data(){
+              return{
+                  msg:""
+              }
+          },
+          methods:{
+              get(){
+                //  this.$http.get("./1.txt").then(res=>{
+                //     console.log(res);
+                //     this.msg=res.data;
+                //   })
+
+
+                //  this.$http.post("./1.txt").then(res=>{
+                //     console.log(res);
+                //     this.msg=res.data;
+                //  }) 
+
+                  this.$http.jsonp('https://sug.so.360.cn/suggest',{
+                            word:'a'
+                        }).then(res=>{
+                            this.msg=res.data.s
+                            console.log(res.data.s);
+                        },res=>{
+                            console.log(res.status);
+                        });
+
+              }
+          }
+      })
+
+    
+    </script>
+</body>
+</html>

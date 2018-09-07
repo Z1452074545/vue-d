@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000/Handler/AdminRegHandler?action=add" method="post">
+       用户名：<input type="text" name="userName">
+       姓名：<input type="text" name="truename">
+       手机号：<input type="text" name="phone">
+       权限选择:<select name="power">
+           <option >系统管理员</option>
+           <option>课程管理员</option>
+       </select>
+       <input type="submit"/>
+    </form>
+   
+</body>
+</html>

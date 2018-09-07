@@ -1,0 +1,65 @@
+vue 是什么？  view 视图
+是一套构建用户界面的渐进式框架,（渐进式：有底向上开发）     
+
+vue的特点？
+mvvm m:model 模型 v:view 视图 vm: 数据交互的过程   
+简洁
+组件化
+模块化
+双向数据绑定
+
+
+vae的应用场景？ 
+构建单页面应用
+
+
+webpack hotupdate 热更新
+
+
+index.html   main.js    idnex.js    app.vue    helloword.vue 
+
+idex.html 主文件
+
+指令:
+v-model 双向数据绑定
+v-for   循环
+v-show  显示或隐藏
+v-if  
+v-else-if 
+v-else
+v-show和v-if的区别
+  是否对dom节点进行删除操作 
+
+v-on   事件
+
+v-text 只解析文本
+
+v-html 可解析标签
+
+v-bind 动态绑定 class style href src
+
+
+v-cloak 解决闪烁问题
+
+
+组件：
+全局组件
+局部组件
+
+父组件
+子组件
+兄弟组件
+
+钩子函数
+
+bind(){}
+ 只调用一次 当绑定元素时调用
+inserted(){}
+ 数据插入时调用
+updata(){}
+ 数据更新是调用
+componentUpdataed(){}
+unbind(){}
+ 只调用一次 解绑时调用
+
+ input ref  v-modld  this.$refs.xx.value 
